@@ -1,0 +1,43 @@
+# ==========================================
+# 🌌 Mirine Monorepo Master .gitignore
+# ==========================================
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# ------------------------------------------
+# 1. Frontend (React / Vite)
+# ------------------------------------------
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/*.local
+frontend/.env
+frontend/.env.development
+frontend/.env.production
+
+# ------------------------------------------
+# 2. Backend (Spring Boot / Gradle / Java)
+# ------------------------------------------
+backend/.gradle/
+backend/build/
+backend/out/
+backend/bin/
+backend/.settings/
+backend/.classpath
+backend/.project
+backend/application.yml
+backend/application-secret.yml
+backend/*.log
+
+# Placeholder
+!**/README.md
+!**/package.json
+!**/build.gradle
