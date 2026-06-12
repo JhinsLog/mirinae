@@ -33,8 +33,7 @@ backend/bin/
 backend/.settings/
 backend/.classpath
 backend/.project
-backend/application.yml
-backend/application-secret.yml
+backend/src/main/resources/application-secret.yaml
 backend/*.log
 
 # Placeholder
