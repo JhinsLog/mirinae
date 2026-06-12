@@ -1,0 +1,36 @@
+spring:
+  config:
+    import: "optional:classpath:application-secret.yaml"
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/{database}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 2
+      idle-timeout: 30000
+      connection-timeout: 20000
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        # Spring Boot 4.0.x (Hibernate 6.x) 표준 PostGIS 공간 방언 지정
+        dialect: org.hibernate.orm.spatial.dialect.postgis.PostgisDialect
+        show_sql: true
+        format_sql: true
+        use_sql_comments: true
+
+  # 로컬 메모리 캐시 및 STOMP 채널 보정용 Redis 인프라 명세
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+logging:
+  level:
+    root: INFO
+    org.hibernate.SQL: DEBUG
+    org.hibernate.orm.jdbc.bind: TRACE
+    com.mirinae.backend: DEBUG

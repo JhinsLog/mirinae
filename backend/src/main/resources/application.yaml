@@ -1,3 +1,13 @@
 spring:
   application:
-    name: backend
+    name: mirinae-backend
+  profiles:
+    # 기본 활성화 프로파일을 로컬 개발 환경(dev)으로 지정합니다.
+    active: dev
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+
+server:
+  port: 8080
