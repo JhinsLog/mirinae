@@ -14,8 +14,6 @@ java {
     }
 }
 
-// 명시되어 있던 repositories { mavenCentral() } 블록을 제거했습니다.
-
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-data-redis")
@@ -25,10 +23,10 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-websocket")
 
     implementation("org.hibernate.orm:hibernate-spatial")
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0")
 
     compileOnly("org.projectlombok:lombok")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
-    developmentOnly("org.springframework.boot:spring-boot-docker-compose")
     runtimeOnly("org.postgresql:postgresql")
     annotationProcessor("org.projectlombok:lombok")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
