@@ -3,7 +3,6 @@ spring:
     import: "optional:classpath:application-secret.yaml"
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/{database}
     driver-class-name: org.postgresql.Driver
     hikari:
       maximum-pool-size: 5
@@ -16,17 +15,15 @@ spring:
       ddl-auto: update
     properties:
       hibernate:
-        # Spring Boot 4.0.x (Hibernate 6.x) 표준 PostGIS 공간 방언 지정
-        dialect: org.hibernate.orm.spatial.dialect.postgis.PostgisDialect
         show_sql: true
         format_sql: true
         use_sql_comments: true
 
   # 로컬 메모리 캐시 및 STOMP 채널 보정용 Redis 인프라 명세
-  data:
-    redis:
-      host: localhost
-      port: 6379
+#  data:
+#    redis:
+#      host: localhost
+#      port: 6379
 
 logging:
   level:
